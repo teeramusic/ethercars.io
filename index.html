@@ -48,9 +48,6 @@
 		height:auto;
 	}
 	</style>
-
-</head>
-<body>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LK64V6CG0Q"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -62,14 +59,8 @@
 		gtag('config', 'G-LK64V6CG0Q');
 	</script>
 </head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">
-<script>
-	// load the correct page according to URL
-	if (document.location.pathname !== '/') {
-		window.location.href = document.location.origin
-	}
-</script>
+<body>
+
 <script src="script.js"></script>
 	<div id="fb-root"></div>
 	<script>
@@ -137,13 +128,13 @@
 			</div>
 			<div class="pic mb-4">
 			</div>
-			<div class="pic my-4">
-			</div>
 			<div class="pic mb-4">
 			</div>
 			<div class="pic mb-4">
 			</div>
-			<div class="pic my-4">
+			<div class="pic mb-4">
+			</div>
+			<div class="pic mb-4">
 			</div>
 			<div class="pic mb-4">
 			</div>
@@ -204,6 +195,7 @@
 		var $pic = $('.pic').toArray();
 		function loadPics(){
 			$pic.forEach(function(e){
+				e.innerHTML = ""
 				for(var i =  0; i < 4;i++){
 					e.innerHTML = e.innerHTML + `<img src=./animated/${getPic()}>`
 				}
