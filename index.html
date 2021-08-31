@@ -132,13 +132,22 @@
 				Checkout Our Collection on OpenSea.io
 			</button></a>
 			<div class="pic my-4">
-
 			</div>
 			<div class="pic mb-4">
-
 			</div>
 			<div class="pic mb-4">
-
+			</div>
+			<div class="pic my-4">
+			</div>
+			<div class="pic mb-4">
+			</div>
+			<div class="pic mb-4">
+			</div>
+			<div class="pic my-4">
+			</div>
+			<div class="pic mb-4">
+			</div>
+			<div class="pic mb-4">
 			</div>
 		</div>
 
@@ -193,12 +202,15 @@
 			return pic[(Math.round(Math.random()*(pic.length-1)))]
 		}
 		var $pic = $('.pic').toArray();
-		$pic.forEach(function(e){
-			for(var i =  0; i < 4;i++){
-				e.innerHTML = e.innerHTML + `<img src=./animated/${getPic()}>`
-			}
-
-		})
+		function loadPics(){
+			$pic.forEach(function(e){
+				for(var i =  0; i < 4;i++){
+					e.innerHTML = e.innerHTML + `<img src=./animated/${getPic()}>`
+				}
+			})
+		}
+		setInterval(loadPics,30000);
+		loadPics();
 
 
 	</script>
